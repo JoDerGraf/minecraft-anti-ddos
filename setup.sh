@@ -39,6 +39,6 @@ if [ "$enable_experimental_protection" = true ] ; then
 fi
 
 
-echo "Saving rules."
-iptables-save > /etc/sysconfig/iptables
-iptables-save > /etc/iptables/rules.v4
+#echo "Saving rules."
+#iptables-save > /etc/sysconfig/iptables
+#iptables-save > /etc/iptables/rules.v4
