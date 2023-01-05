@@ -17,5 +17,5 @@ iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --set
 iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 120 --hitcount 30 -j DROP
 
 # protect rcon from brute-force
-iptables -A INPUT -p tcp --dport $3 -m conntrack --ctstate NEW -m recent --set
-iptables -A INPUT -p tcp --dport $3 -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 20 -j DROP
+# iptables -A INPUT -p tcp --dport $3 -m conntrack --ctstate NEW -m recent --set
+# iptables -A INPUT -p tcp --dport $3 -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 20 -j DROP
