@@ -8,7 +8,7 @@ country_list="https://github.com/herrbischoff/country-ip-blocks/blob/master/ipv4
 
 # add whitelisted countries to an ipset
 # countries from https://gist.github.com/oqo0/47a185af30c966a362dbdfebf3771400
-for ip in $(curl -L $country_list/{de,uk,fr,es,ca,au,ch,it}.cidr);
+for ip in $(curl -L $country_list/{de,uk,fr,es,ca,au,ch,it,pl}.cidr);
     do ipset -A country_whitelist $ip
 done
 
