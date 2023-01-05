@@ -24,7 +24,7 @@ Test server: Intel Xeon E5-2680V2 1 core, Ubuntu Server 20.04, OpenJDK 8
 
 1) Clone project
 ```
-git clone https://github.com/oqo0/minecraft-anti-ddos.git
+git clone https://github.com/JoDerGraf/minecraft-anti-ddos
 ```
 
 2) Adjust script for your needs
