@@ -2,7 +2,7 @@
 
 # block port scan
 iptables -N anti-port-scan
-iptables -A anti-port-scan -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s -j RETURN
+iptables -A anti-port-scan -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 8/s -j RETURN
 iptables -A anti-port-scan -j DROP
 
 # block hosts that have more than 6 established connections
