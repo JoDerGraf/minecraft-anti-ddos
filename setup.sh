@@ -12,7 +12,8 @@ enable_experimental_protection=false
 
 
 echo "Installing dependencies."
-apt -y -qq install curl iptables-persistent ipset conntrack
+apt -y -qq install curl iptables-persistent conntrack
+#apt -y -qq install curl iptables-persistent ipset conntrack
 #yum -y install curl iptables-service ipset-service conntrack
 
 
@@ -22,10 +23,10 @@ chmod +x ./scripts/geo_protection.sh
 chmod +x ./scripts/traffic_protection.sh
 
 
-echo "Blocking dangerous \ invalid packets."
+echo "Blocking dangerous \  invalid packets."
 ./scripts/activity_protection.sh
 
-echo "Enabling traffic limitations \ protection."
+echo "Enabling traffic limitations \  protection."
 ./scripts/traffic_protection.sh
 
 if [ "$geo_whitelist_enabled" = true ] ; then
