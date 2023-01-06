@@ -6,7 +6,7 @@ iptables -A anti-port-scan -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --lim
 iptables -A anti-port-scan -j DROP
 
 # block hosts that have more than 6 established connections
-iptables -A INPUT -p tcp -m connlimit --connlimit-above 6 -j REJECT --reject-with tcp-reset
+iptables -A INPUT -p tcp -m connlimit --dport 25565 --connlimit-above 6 -j REJECT --reject-with tcp-reset
 # limits the new tcp connections that a client can establish
 iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 10/s --limit-burst 8 -j ACCEPT
 iptables -A INPUT -p tcp -m conntrack --ctstate NEW -m limit --limit 300/s --limit-burst 24 -j ACCEPT 
