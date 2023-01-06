@@ -4,7 +4,7 @@
 
 # Allow traffic to your Minecraft port only from whitelisted countries.
 # Check scripts/geo_protection.sh first.
-geo_whitelist_enabled=true
+geo_whitelist_enabled=false
 
 # Please check scripts/experimental_protection.sh before enabling.
 # Disabled by default because it might cause some problems with incoming minecraft connections.
