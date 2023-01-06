@@ -13,7 +13,7 @@ enable_experimental_protection=false
 
 echo "Installing dependencies."
 apt -y -qq install curl iptables-persistent ipset conntrack
-yum -y install curl iptables-service ipset-service conntrack
+#yum -y install curl iptables-service ipset-service conntrack
 
 
 chmod +x ./scripts/activity_protection.sh
